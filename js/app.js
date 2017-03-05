@@ -1,22 +1,16 @@
-window.addEventListener('load',function(){
-	var calcular = document.getElementById('convertir');
-	calcular.addEventListener('click',function () {
+var masa = parseFloat(document.getElementById("peso").value) / 9.8;
+var planetaSolar = document.getElementById("sistemaSolar").value;
+var msn = "";
 
-	var peso = parseFloat(document.getElementById('peso').value);
-	var planeta =document.getElementById('planeta').value;
-	var resultado;
-
- 
-	switch(planeta){
-	case("Mercurio"): resultado = peso*2.78; break;
-	case("venus"): resultado = peso*8.87; break;
-	case("Tierra"): resultado = peso*9.78; break;
-	case("Marte"): resultado = peso*3.72; break;
-
-	}
-	
- alert("Tu peso en "+planeta+" es: "+resultado);
-});
-});
-
-
+switch(planetaSolar){
+	case "Mercurio": peso = masa * 3.70; break;
+	case "Venus": peso = masa * 8.87; break;
+	case "Tierra": peso = masa * 9.80; break;
+	case "Marte": peso = masa * 3.71; break;
+	case "Jupiter": peso = masa * 23.12; break;
+	case "Saturno": peso = masa * 8.96; break;
+	case "Urano": peso = masa * 8.69; break;
+	case "Neptuno": peso = masa * 11; break;
+	case "Pluton": peso = masa * 0.81; break;
+}
+alert("Tu perso en  <b>" + planetaSolar + "</b> es: " + peso.toFixed(2));
